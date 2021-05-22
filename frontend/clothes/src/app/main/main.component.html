@@ -1,0 +1,28 @@
+<nav class="navbar navbar-left navbar-dark bg-dark">
+<div class ="inline">
+    <li class="nav-item navelement">
+        <a class="link-light" routerLink="/main" routerLinkActive="activebutton">Oh Yeah</a>
+      </li>
+</div>
+<div class="inline">
+      <li class="nav-item inline">
+        <a class="link-light" routerLink="/cart" routerLinkActive="activebutton">Kosár</a>
+      </li>
+      <li class="nav-item inline">
+        <a class="link-light" routerLink="/login" routerLinkActive="activebutton">Kijelentkezés</a>
+      </li>
+    </div>
+  </nav>
+
+<div class="flexcontainer">
+<div class="card" style="width: 18rem;" *ngFor="let product of products">
+    <img [src]="product.cloth_image" alt="image">
+    <div class="card-body">
+      <h5><a class="link-dark" routerLink="/detail/{{product.cloth_Id}}"> {{product. cloth_name}}</a></h5>
+      <p class="card-text">{{ product.cloth_desc }}</p>
+    </div>
+    <div class="card-body">
+      
+    </div>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.inline{
+    margin: 6px;
+    display: inline-block;
+}
+
+.detail_image{
+    display: inline;
+    width: 40%;
+    float:left;
+}
+
+.detail_desc{
+    display: inline;
+    padding: 30px;
+    width: 60%;
+    float:right;
+}
+
+h1, h5{
+    text-align: center;
+}

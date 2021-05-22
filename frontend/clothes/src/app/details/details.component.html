@@ -1,0 +1,28 @@
+<nav class="navbar navbar-left navbar-dark bg-dark">
+  <div class ="inline">
+      <li class="nav-item navelement">
+          <a class="link-light" routerLink="/main" routerLinkActive="activebutton">Oh Yeah</a>
+        </li>
+  </div>
+  <div class="inline">
+        <li class="nav-item inline">
+          <a class="link-light" routerLink="/cart" routerLinkActive="activebutton">Kosár</a>
+        </li>
+        <li class="nav-item inline">
+          <a class="link-light" routerLink="/login" routerLinkActive="activebutton">Kijelentkezés</a>
+        </li>
+      </div>
+    </nav>
+
+<div class="container" *ngIf="product">
+  <div class="detail_image">
+    <img [src]="product.cloth_image" alt="image">
+  </div>
+  <div class="detail_desc"> 
+    <h1>{{product.cloth_name | uppercase}}</h1>
+    <h4> {{ product.cloth_desc }} </h4>
+    <h4> A termék ára: {{ product.cloth_price }} </h4>
+    <h4> A termékből elérhető mennyiség: {{ product.cloth_quantity }} </h4>
+    <button class="btn btn-dark" (click)="addCart(product)">Kosárba</button>
+  </div>
+</div>
