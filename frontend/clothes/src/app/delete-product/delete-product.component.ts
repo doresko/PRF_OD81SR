@@ -22,7 +22,7 @@ export class DeleteProductComponent implements OnInit {
   deleteProduct(): void {
     const id = Number(this.route.snapshot.paramMap.get('id'));
     console.log(id);
-    this.http.delete("http://localhost:3000/product/"+id) 
+    this.http.delete("window.location.origin/product/"+id) 
    }
 
   ngOnInit(): void {

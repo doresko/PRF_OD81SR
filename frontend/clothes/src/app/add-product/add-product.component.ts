@@ -35,7 +35,7 @@ export class AddProductComponent implements OnInit {
       cloth_quantity : this.cloth_quantity,
       cloth_image : this.cloth_image
     }
-    this.http.post("http://localhost:3000/add_product", { product: tp },
+    this.http.post("window.location.origin/add_product", { product: tp },
     {
       responseType: 'text', 
       withCredentials: true}).subscribe(data =>{

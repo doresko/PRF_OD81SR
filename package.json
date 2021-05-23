@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Programrendszerek fejlesztése gyakorlati beadandó verziókövetésére létrehozott GitHub repository",
   "main": "index.js",
-  "scripts": {
+  "scripts": { 
     "heroku-postbuild": "npm i && cd frontend/clothes && npm i",
     "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
