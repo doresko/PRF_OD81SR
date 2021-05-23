@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
   constructor(private http: HttpClient) { }
 
   getProducts(): void {
-    this.http.post<Product[]>("window.location.origin/products", {responseType: 'text', withCredentials: true}).subscribe(data =>{
+    this.http.post<Product[]>(window.location.origin+"/products", {responseType: 'text', withCredentials: true}).subscribe(data =>{
       this.products = data
     })
 
