@@ -137,6 +137,13 @@ app.post('/add_product', (req, res) => {
       .catch(error => console.error(error))
   })
   
+  app.delete('/delete_product/:cloth_Id', (req, res) =>{
+    Product.findOneAndRemove({
+        "cloth_Id": req.body.cloth_Id
+    }, (err, result) =>{res.send(result)
+    })
+
+}) 
 
 var port = process.env.PORT
 

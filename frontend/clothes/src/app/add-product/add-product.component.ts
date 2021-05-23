@@ -39,12 +39,9 @@ export class AddProductComponent implements OnInit {
     {
       responseType: 'text', 
       withCredentials: true}).subscribe(data =>{
-      /*this.product = data*/
-      console.log(data)
     })
   }
   
   ngOnInit(): void {
-   /* this.addProduct();*/
   }
 }

@@ -4,7 +4,7 @@ import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
 /*import { ProductService } from '../product.service';*/
-
+ 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
@@ -17,7 +17,7 @@ export class DetailsComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private http: HttpClient,
-    private location: Location
+    private location: Location 
     ) { }
 
     getProduct(): void {

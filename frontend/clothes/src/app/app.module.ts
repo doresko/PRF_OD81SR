@@ -10,7 +10,8 @@ import { Notfound404Component } from './notfound404/notfound404.component';
 import { DetailsComponent } from './details/details.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AdminComponent } from './admin/admin.component';
-import { AddProductComponent } from './add-product/add-product.component'
+import { AddProductComponent } from './add-product/add-product.component';
+import { DeleteProductComponent } from './delete-product/delete-product.component'
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { AddProductComponent } from './add-product/add-product.component'
     DetailsComponent,
     Notfound404Component,
     AdminComponent,
-    AddProductComponent
+    AddProductComponent,
+    DeleteProductComponent
   ],
   imports: [
     BrowserModule,
