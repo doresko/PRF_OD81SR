@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Product } from '../product';
 
@@ -16,16 +16,21 @@ export class DeleteProductComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private http: HttpClient,
-    private location: Location 
+    private location: Location,
+    private router: Router
   ) { } 
 
-  deleteProduct(): void {
+   deleteProduct(){
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    console.log(id);
-    this.http.delete(window.location.origin+"/product/"+id) 
-   }
 
-  ngOnInit(): void {
+    this.http.post(window.location.origin+"/deleteProduct", {cloth_Id: id},{responseType: 'text', withCredentials: true}).subscribe(data => {
+      console.log(data)
+    })
+    this.router.navigate(["/appadmin"])
+    this.ngOnInit()
+  }
+
+  ngOnInit(): void { 
   }
 
 }

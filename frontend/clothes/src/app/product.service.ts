@@ -20,7 +20,7 @@ export class ProductService {
 
   getProduct(product: Product) {
     const id = Number(this.route.snapshot.paramMap.get('id'));
-    this.http.post<Product>("window.location.origin/product/"+id, {responseType: 'text', withCredentials: true, cloth_Id: id}).subscribe(data =>{
+    this.http.post<Product>(window.location.origin+"/product/"+id, {responseType: 'text', withCredentials: true, cloth_Id: id}).subscribe(data =>{
     this.product = data;
     return this.product;
   })

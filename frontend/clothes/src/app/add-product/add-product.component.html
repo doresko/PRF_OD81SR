@@ -1,12 +1,18 @@
-<p>add-product works!</p>
-
-<h2>HTML Forms</h2>
-<form>
-    <input type="number" name="cloth_Id" [(ngModel)]="cloth_Id"><br>
-    <input type="text"  name="cloth_name" [(ngModel)]="cloth_name"><br>
-    <input type="text"  name="cloth_desc" [(ngModel)]="cloth_desc"><br>
-    <input type="number" name="cloth_price" [(ngModel)]="cloth_price"><br>
-    <input type="number" name="cloth_quantity" [(ngModel)]="cloth_quantity"><br>
-    <input type="text" name="cloth_image"[(ngModel)]="cloth_image"><br>
-    <button class="a" (click)="addProduct()">Hozzáadás</button>
-</form>
+<div class="container">
+    <form>
+        <h1> Termék hozzáadása</h1>
+        <p>A termék azonosítója (Id)</p>
+        <input type="number" name="cloth_Id" [(ngModel)]="cloth_Id"><br>
+        <p>A termék neve</p>
+        <input type="text"  name="cloth_name" [(ngModel)]="cloth_name"><br>
+        <p>A termék leírása</p>
+        <input type="text"  name="cloth_desc" [(ngModel)]="cloth_desc"><br>
+        <p>A termék ára</p>
+        <input type="number" name="cloth_price" [(ngModel)]="cloth_price"><br>
+        <p>A termék mennyiség</p>
+        <input type="number" name="cloth_quantity" [(ngModel)]="cloth_quantity"><br>
+        <p>A termék elérési útja</p>
+        <input type="text" name="cloth_image"[(ngModel)]="cloth_image"><br><br>
+        <button class="btn btn-success" (click)="addProduct()">Hozzáadás</button>
+    </form>
+</div>

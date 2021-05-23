@@ -137,13 +137,21 @@ app.post('/add_product', (req, res) => {
       .catch(error => console.error(error))
   })
   
-  app.delete('/delete_product/:cloth_Id', (req, res) =>{
-    Product.findOneAndRemove({
-        "cloth_Id": req.body.cloth_Id
-    }, (err, result) =>{res.send(result)
-    })
 
-}) 
+  app.post("/deleteProduct", (req, res) => {
+    var temp_id = req.body.cloth_Id;
+    Product.findOneAndRemove(
+      {
+        cloth_Id: temp_id,
+      },
+      (err, result) => {
+        if (err) {
+          console.log(err);
+        }
+        res.send(result);
+      }
+    );
+  });
 
 var port = process.env.PORT
 
