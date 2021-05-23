@@ -11,15 +11,9 @@ const userSchema = require("./models/user")
 const bodyParser = require("body-parser")
 var cors = require("cors")
 
-
 require('dotenv').config();
 
-
-
 const app = express();
-
-
-
 
 app.use(cors())
 app.use(bodyParser.json())
@@ -133,6 +127,16 @@ app.post('/product/:cloth_Id', (req, res) =>{
     }, (err, result) =>{res.send(result)
     })
 })
+
+app.post('/add_product', (req, res) => {
+    console.log(req.body.product)
+    Product.create(req.body.product)
+      .then(result => {
+        console.log(result)
+      })
+      .catch(error => console.error(error))
+  })
+  
 
 var port = process.env.PORT
 

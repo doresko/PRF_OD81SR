@@ -3,6 +3,7 @@ import { Product } from '../product';
 import { HttpClient } from "@angular/common/http";
 import { ActivatedRoute } from '@angular/router';
 import { Location } from '@angular/common';
+/*import { ProductService } from '../product.service';*/
 
 @Component({
   selector: 'app-details',
@@ -24,7 +25,7 @@ export class DetailsComponent implements OnInit {
       this.http.post<Product>("http://localhost:3000/product/"+id, {responseType: 'text', withCredentials: true, cloth_Id: id}).subscribe(data =>{
       this.product = data})
     }
-    
+
     addCart(tmp : Product){
       alert("Hozzáadtuk a kosárhoz")
       let cartAll = localStorage.getItem('cart')
